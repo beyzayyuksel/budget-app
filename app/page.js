@@ -14,11 +14,6 @@ export default function Home() {
     setExpenses(savedExpenses);
   }, []);
 
-  useEffect(() => {
-    const savedBudget = JSON.parse(localStorage.getItem("budget"));
-    setBudget(savedBudget);
-  }, []);
-
   const addExpense = (expense) => {
     setExpenses([...expenses, expense]);
     localStorage.setItem("expenses", JSON.stringify([...expenses, expense]));
@@ -35,9 +30,9 @@ export default function Home() {
   }
   return (
     <div className="flex flex-col flex-auto">
-      <div className="flex flex-auto">
+      <div className="md:flex flex-auto">
         <div className="bg-gray-dark flex-1">
-          <div className="flex flex-col gap-20 p-16 text-white">
+          <div className="flex flex-col gap-10 md:gap-20 p-8 py-16 md:p-16 text-white">
             <BudgetInput setBudget={setBudget} />
             <ExpensesForm addExpense={addExpense} expenses={expenses} />
           </div>

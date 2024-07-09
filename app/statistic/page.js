@@ -39,20 +39,20 @@ export default function Statistic() {
       x: {
         type: "time",
         time: {
-          unit: "month", // Ay bazında gruplama
+          unit: "month",
           displayFormats: {
-            month: "MMM yyyy", // Ay ve yıl formatı
+            month: "MMM yyyy",
           },
-          tooltipFormat: "MMM yyyy", // Tooltip formatı
+          tooltipFormat: "MMM yyyy",
         },
         title: {
-          display: true,
+          display: false,
           text: "Date",
         },
       },
       y: {
         title: {
-          display: true,
+          display: false,
           text: "Amount",
         },
       },
@@ -60,10 +60,15 @@ export default function Statistic() {
   };
 
   return (
-    <div className="flex-auto">
-      <div className="bg-black py-16">
-        <div className="bg-white shadow-lg mx-24">
-          <Chart type="line" data={data} options={options} />
+    <div className="flex-auto flex flex-col">
+      <div className="bg-black pt-16 flex-auto">
+        <div className="bg-white shadow-lg md:mx-24">
+          <Chart
+            className="min-h-56 max-h-128 items-center"
+            type="line"
+            data={data}
+            options={options}
+          />
         </div>
       </div>
       <BudgetSummary budget={budget} expenses={expenses} />

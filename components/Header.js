@@ -6,7 +6,7 @@ import React from "react";
 const Header = () => {
   const path = usePathname();
   return (
-    <header className={path === "/" ? "flex" : "bg-black"}>
+    <header className={path === "/" ? "md:flex" : "bg-black"}>
       <div className="bg-gray-dark flex-1"></div>
       <nav className="flex-1 bg-black text-white text-sm">
         <ul className="flex justify-end gap-3 p-1 pr-8">

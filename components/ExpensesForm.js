@@ -3,34 +3,41 @@ import { useState, useRef } from "react";
 import { Toast } from "primereact/toast";
 
 const ExpensesForm = ({ addExpense, expenses }) => {
-  const [expense, setExpense] = useState("");
+  const [expenseName, setExpenseName] = useState("");
   const [amount, setAmount] = useState("");
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState("");
 
   const toast = useRef(null);
 
-  const show = () => {
+  const showSuccess = () => {
     toast.current.show({
       severity: "success",
-      detail: `${expense} is added`,
+      detail: `${expenseName} is added`,
     });
   };
 
   const handleSubmit = () => {
+    if (!expenseName || !amount || !date) {
+      toast.current.show({
+        severity: "error",
+        detail: "All fields are required",
+      });
+      return;
+    }
     addExpense({
       id: expenses.length + 1,
-      name: expense,
+      name: expenseName,
       amount: Number(amount),
       date: date,
     });
-    setExpense("");
+    setExpenseName("");
     setAmount("");
-    setDate(null);
-    show();
+    setDate("");
+    showSuccess();
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="flex flex-wrap gap-6">
       <div className="flex flex-col gap-2 relative">
         <label
           htmlFor="budget"
@@ -41,8 +48,8 @@ const ExpensesForm = ({ addExpense, expenses }) => {
         <input
           type="text"
           id="budget"
-          value={expense}
-          onChange={(e) => setExpense(e.target.value)}
+          value={expenseName}
+          onChange={(e) => setExpenseName(e.target.value)}
           className="p-3 pt-8 rounded-xl text-lg bg-gray-input max-w-40"
         ></input>
       </div>

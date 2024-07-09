@@ -1,14 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const BudgetInput = ({ setBudget }) => {
+const BudgetInput = ({ budget, setBudget }) => {
   const [amount, setAmount] = useState(0);
 
   useEffect(() => {
-    const savedBudget = JSON.parse(localStorage.getItem("budget")) || 0;
+    const savedBudget = JSON.parse(localStorage.getItem("budget"));
     setAmount(savedBudget);
     setBudget(savedBudget);
-  }, [setBudget]);
+  }, []);
 
   const handleChange = (e) => {
     setAmount(e.target.value);
@@ -17,8 +17,8 @@ const BudgetInput = ({ setBudget }) => {
   };
 
   return (
-    <div className="flex flex-col gap-8 text-4xl font-bold">
-      <h2>Simplified Budget</h2>
+    <div className="flex flex-col gap-8">
+      <h2 className="text-3xl md:text-4xl font-bold">Simplified Budget</h2>
       <div className="flex flex-col gap-2 relative">
         <label
           htmlFor="budget"
@@ -31,7 +31,7 @@ const BudgetInput = ({ setBudget }) => {
           value={amount}
           onChange={handleChange}
           id="budget"
-          className="p-3 pt-8 rounded-xl text-lg bg-gray-input"
+          className="p-3 pt-8 rounded-xl text-lg bg-gray-input max-w-64 md:min-w-full"
         ></input>
       </div>
     </div>
