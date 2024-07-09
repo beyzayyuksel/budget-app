@@ -4,8 +4,11 @@ This is a budget tracking application built with Next.js. It allows users to inp
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 1.Set your budget using the input field on the homepage.
+
 2.Add expenses by entering the expense name, amount, and date.
+
 3.View all expenses and remove any if necessary.
+
 4.Check the statistics page to see a graphical representation of your expenses over time.
 
 ## Deployment
@@ -13,9 +16,13 @@ This application is deployed on Vercel. You can view the live application here: 
 
 ## Technologies Used
 Next.js: A React framework for server-side rendering and generating static websites.
+
 React: A JavaScript library for building user interfaces.
+
 Chart.js: A JavaScript library for creating beautiful charts to visualize expense data.
+
 PrimeReact: A collection of rich UI components for React.
+
 LocalStorage: Used for storing budget and expense data locally in the user's browser.
 
 ## Installation
@@ -30,4 +37,7 @@ Run the development server:
 npm run dev
 Open http://localhost:3000 with your browser to see the result.
 
+## Screenshots
 ![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/f1593147-5f81-4c57-83ac-01d35dad2b80)
+![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/049332c3-19d8-4607-81e2-5e2ff1e073d2)
+![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/6bde8249-9710-4f0e-9c3c-157039f22b1e)
