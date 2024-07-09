@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Budget Tracking App
+This is a budget tracking application built with Next.js. It allows users to input their budget, track their expenses, and visualize their spending patterns with charts. The application stores data in local storage and includes user authentication, budget management, and expense tracking features.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1.Set your budget using the input field on the homepage.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2.Add expenses by entering the expense name, amount, and date.
 
-## Learn More
+3.View all expenses and remove any if necessary.
 
-To learn more about Next.js, take a look at the following resources:
+4.Check the statistics page to see a graphical representation of your expenses over time.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
+This application is deployed on Vercel. You can view the live application here: https://budget-app-umber-beta.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
+Next.js: A React framework for server-side rendering and generating static websites.
 
-## Deploy on Vercel
+React: A JavaScript library for building user interfaces.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Chart.js: A JavaScript library for creating beautiful charts to visualize expense data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+PrimeReact: A collection of rich UI components for React.
+
+LocalStorage: Used for storing budget and expense data locally in the user's browser.
+
+## Installation
+Clone the repository:
+git clone https://github.com/yourusername/budget-tracking-app.git
+cd budget-tracking-app
+
+Install dependencies:
+npm install
+
+Run the development server:
+npm run dev
+Open http://localhost:3000 with your browser to see the result.
+
+## Screenshots
+![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/f1593147-5f81-4c57-83ac-01d35dad2b80)
+![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/049332c3-19d8-4607-81e2-5e2ff1e073d2)
+![image](https://github.com/beyzayyuksel/budget-app/assets/117475142/6bde8249-9710-4f0e-9c3c-157039f22b1e)
