@@ -5,7 +5,7 @@ const BudgetInput = ({ budget, setBudget }) => {
   const [amount, setAmount] = useState(0);
 
   useEffect(() => {
-    const savedBudget = JSON.parse(localStorage.getItem("budget"));
+    const savedBudget = JSON.parse(localStorage.getItem("budget")) || 0;
     setAmount(savedBudget);
     setBudget(savedBudget);
   }, []);
